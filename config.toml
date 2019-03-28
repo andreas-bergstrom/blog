@@ -1,98 +1,105 @@
 baseURL = "https://andreasbergstrom.com/"
 languageCode = "en-us"
+defaultContentLanguage = "en"
 title = "Andreas Bergström"
-theme = "keepit"
+theme = "hermit"
+# enableGitInfo = true
+pygmentsCodefences  = true
+pygmentsUseClasses  = true
+# hasCJKLanguage = true  # If Chinese/Japanese/Korean is your main content language, enable this to make wordCount works right.
+rssLimit = 10  # Maximum number of items in the RSS feed.
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
+# googleAnalytics = "UA-123-45"
+# disqusShortname = "yourdiscussshortname"
 
-paginate = 12
-enableEmoji = true
-enableRobotsTXT = true
-googleAnalytics = ""
+[author]
+  name = "Andreas Bergström"
+
+[blackfriday]
+  # hrefTargetBlank = true
+  # noreferrerLinks = true
+  # nofollowLinks = true
+
+[taxonomies]
+  tag = "tags"
+  # Categories are disabled by default.
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  description = "Personal blog of Andreas Bergström"
+
+  # Metadata mostly used in document's head
+  # description = ""
+  # images = [""]
+  themeColor = "#494f5c"
+
+  homeSubtitle = "Full Stack Web & Mobile Developer"
+  footerCopyright = ''
+  # bgImg = ""  # Homepage background-image URL
+
+  # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  # gitUrl = "https://github.com/username/repository/commit/"
+
+  # Toggling this option needs to rebuild SCSS, requires Hugo extended version
+  justifyContent = false  # Set "text-align: justify" to `.content`.
+
+  # Add custom css
+  # customCSS = ["css/foo.css", "css/bar.css"]
+
+  # Social Icons
+  # Check https://github.com/Track3/hermit#social-icons for more info.
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/echoandreas"
+
+  [[params.social]]
+    name = "instagram"
+    url = "https://instagram.com/andreas_erik_bergstrom"
+
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/andreas-bergstrom"
+
+  [[params.social]]
+    name = "email"
+    url = "mailto:hi@andreasbergstrom.com"
+
+  [[params.social]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/andreaserikbergstrom"
+
+  [[params.social]]
+    name = "stackoverflow"
+    url = "https://stackoverflow.com/users/1202214/andreas-bergström"
+
+# Codewar
+# Codepen?
 
 [sitemap]
-  changefreq = "monthly"
+  changefreq = "weekly"
   filename = "sitemap.xml"
   priority = 0.5
 
-[blackfriday]
-  hrefTargetBlank = true
-  nofollowLinks = true
-  noreferrerLinks = true
-
-[Permalinks]
- posts = "/:year/:filename/"
-
 [menu]
+
   [[menu.main]]
     name = "Blog"
-    url = "/posts/"
-    weight = 1
+    url = "posts/"
+    weight = 10
 
   [[menu.main]]
-    name = "Categories"
-    url = "/categories/"
-    weight = 3
+    name = "Tags"
+    url = "tags/"
+    weight = 15
 
   [[menu.main]]
-    name = "About"
-    url = "/about"
-    weight = 4
+    name = "About me"
+    url = "about-me/"
+    weight = 20
 
-[params]
-    since = 2019
-    author = "Andreas Bergström"
-    avatar = "/images/me/avatar.jpeg"
-    subtitle = "Developer"
-    cdn_url = ""
-    home_mode = "" # post or other
-
-    google_verification = ""
-
-    description = "" # site description
-    keywords = "" # site keywords
-
-    license= 'Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
-
-[params.social]
-    GitHub = "andreas-bergstrom"
-    Linkedin = "andreaserikbergstrom"
-    Twitter = "echoandreas"
-    Instagram = "andreas_erik_bergstrom"
-    Email   = "hi@andreasbergstrom.com"
-    Facebook = "andreas.erik.bergstrom"
-    #Telegram = "xxxx"
-    #Medium = "xxxx"
-    #Gitlab = "xxxx"
-    #Youtube = "xxxx"
-    #Tumblr ="xxxx"
-    #Quora = "xxxx"
-    #Keybase = "xxxx"
-    #Pinterest = "xxxx"
-    #Reddit = "xxxx"
-    #Codepen = "xxxx"
-    #Bitbucket = "xxxx"
-    Stackoverflow = "1202214"
-
-# Used only for Seo schema 
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
-
-[author]
-  name = "Fastbyte01"
-
-  [params.publisher]
-    name = "Fastbyte01"
-
-    [params.publisher.logo]
-      url = "logo.png"
-      width = 127
-      height = 40
-
-  [params.logo]
-    url = "logo.png"
-    width = 127
-    height = 40
-
-  [params.image]
-    url = "cover.png"
-    width = 800
-    height = 600
     
